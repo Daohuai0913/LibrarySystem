@@ -21,7 +21,7 @@ background-attachment: fixed;">
 <div style="padding: 70px 550px 10px">
     <form   method="post" action="querybook.html" class="form-inline"  id="searchform">
         <div class="input-group">
-           <input type="text" placeholder="输入图书名" class="form-control" id="search" name="searchWord" class="form-control">
+           <input type="text" placeholder="输入分类名" class="form-control" id="search" name="searchWord" class="form-control">
             <span class="input-group-btn">
                             <input type="submit" value="搜索" class="btn btn-default">
             </span>
@@ -60,38 +60,38 @@ background-attachment: fixed;">
 <div class="panel panel-default" style="width: 90%;margin-left: 5%">
     <div class="panel-heading" style="background-color: #fff">
         <h3 class="panel-title">
-            全部图书
+            全部分类
         </h3>
     </div>
     <div class="panel-body">
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>书名</th>
-                <th>作者</th>
-                <th>出版社</th>
-                <th>ISBN</th>
-                <th>价格</th>
-                <th>剩余数量</th>
-                <th>详情</th>
-                <th>编辑</th>
-                <th>删除</th>
+                <th>ID</th>
+                <th>名称</th>
+<%--                <th>出版社</th>--%>
+<%--                <th>ISBN</th>--%>
+<%--                <th>价格</th>--%>
+<%--                <th>剩余数量</th>--%>
+<%--                <th>详情</th>--%>
+<%--                <th>编辑</th>--%>
+<%--                <th>删除</th>--%>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${books}" var="book">
+            <c:forEach items="${tages}" var="tage">
             <tr>
-                <td><c:out value="${book.name}"></c:out></td>
-                <td><c:out value="${book.author}"></c:out></td>
-                <td><c:out value="${book.publish}"></c:out></td>
-                <td><c:out value="${book.ISBN}"></c:out></td>
-                <td><c:out value="${book.price}"></c:out></td>
-                <td><c:out value="${book.number}"></c:out></td>
-                <td><a href="admin_book_detail.html?bookId=<c:out value="${book.bookId}"></c:out>">
+                <td><c:out value="${tage.classId}"></c:out></td>
+                <td><c:out value="${tage.className}"></c:out></td>
+<%--                <td><c:out value="${book.publish}"></c:out></td>--%>
+<%--                <td><c:out value="${book.ISBN}"></c:out></td>--%>
+<%--                <td><c:out value="${book.price}"></c:out></td>--%>
+<%--                <td><c:out value="${book.number}"></c:out></td>--%>
+                <td><a href="admin_book_detail.html?bookId=<c:out value="${tage.classId}"></c:out>">
                     <button type="button" class="btn btn-success btn-xs">详情</button>
                 </a></td>
-                <td><a href="updatebook.html?bookId=<c:out value="${book.bookId}"></c:out>"><button type="button" class="btn btn-info btn-xs">编辑</button></a></td>
-                <td><a href="deletebook.html?bookId=<c:out value="${book.bookId}"></c:out>"><button type="button" class="btn btn-danger btn-xs">删除</button></a></td>
+                <td><a href="updatebook.html?bookId=<c:out value="${tage.classId}"></c:out>"><button type="button" class="btn btn-info btn-xs">编辑</button></a></td>
+                <td><a href="deletebook.html?bookId=<c:out value="${tage.classId}"></c:out>"><button type="button" class="btn btn-danger btn-xs">删除</button></a></td>
             </tr>
             </c:forEach>
             </tbody>

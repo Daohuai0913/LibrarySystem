@@ -18,6 +18,20 @@
                         <li><a href="book_add.html">增加图书</a></li>
                     </ul>
                 </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+                        书籍类别
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin_tags.html">全部类别</a></li>
+                        <li class="divider"></li>
+                        <li><a href="tage_add.html">增加类别</a></li>
+                    </ul>
+                </li>
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
                         读者管理

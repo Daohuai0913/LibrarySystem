@@ -1,5 +1,4 @@
-CREATE DATABASE library;
-USE library;
+USE book_content;
 
 SET NAMES utf8;
 START TRANSACTION;

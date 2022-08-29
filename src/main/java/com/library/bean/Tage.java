@@ -4,15 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author huai
+ * @date 2022/8/30
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Admin {
-
-    private long adminId;
-    private String password;
-    private String username;
-
-
-
+public class Tage {
+    private int classId;
+    private String className;
 }

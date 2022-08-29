@@ -15,13 +15,19 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>4.2.2.RELEASE</spring.version>
-        <mysql.version>5.1.29</mysql.version>
+        <mysql.version>8.0.30</mysql.version>
         <servlet.version>3.0-alpha-1</servlet.version>
         <commons-codec.version>1.9</commons-codec.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <jetty.version>8.1.8.v20121106</jetty.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -90,7 +96,7 @@
                 <configuration>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>8080</port>
+                            <port>80</port>
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
